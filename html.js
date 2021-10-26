@@ -1,7 +1,9 @@
-const _SERVIDORh = "http://galeria.esmonserrate.org/2do/";
+const _SERVIDORh = "http://www.esmonserrate.org/";
 
-//include other html page -  is fine for adding page with commun menus in a site
+
+
 function includeHTML(tag) {
+  //
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
@@ -29,7 +31,7 @@ function includeHTML(tag) {
   }
 }
 
-// reload a js -  it fine for reload js for set off html elements loaded on real time
+
 function load_js(scriptPath) {
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
@@ -37,3 +39,20 @@ function load_js(scriptPath) {
       head.appendChild(script);
    }
 
+
+function getURLParam(param){
+   const queryString = window.location.search;
+    //console.log(queryString);
+   const urlParams = new URLSearchParams(queryString);
+   const id = urlParams.get(param)
+   return id
+  
+}
+
+function getURLPos(pos){
+  var queryString = window.location.pathname;
+  queryString=queryString.split("/")
+  //queryString=queryString[1].split("/")
+  console.log(queryString[pos]);  
+  return queryString[pos];
+}
