@@ -1,9 +1,8 @@
 const _SERVIDORh = "http://www.esmonserrate.org/";
 
 
-
+//Include a html file
 function includeHTML(tag) {
-  //
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
@@ -32,6 +31,7 @@ function includeHTML(tag) {
 }
 
 
+//reload a .js file
 function load_js(scriptPath) {
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
@@ -39,7 +39,7 @@ function load_js(scriptPath) {
       head.appendChild(script);
    }
 
-
+//get a url parameter indicate by param
 function getURLParam(param){
    const queryString = window.location.search;
     //console.log(queryString);
@@ -49,6 +49,7 @@ function getURLParam(param){
   
 }
 
+//get a url parte indicate by position
 function getURLPos(pos){
   var queryString = window.location.pathname;
   queryString=queryString.split("/")
