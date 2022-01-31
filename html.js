@@ -57,3 +57,13 @@ function getURLPos(pos){
   console.log(queryString[pos]);  
   return queryString[pos];
 }
+
+
+
+function printDiv(tableName) {
+         window.frames["print_frame"].document.body.innerHTML = document.getElementById(tableName).innerHTML;
+         window.frames["print_frame"].window.focus();
+         window.frames["print_frame"].window.print();
+       }
+
+
