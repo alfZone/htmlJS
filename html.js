@@ -1,5 +1,11 @@
-const _SERVIDORh = "http://www.esmonserrate.org/";
+/**
+ * @author alf
+ * @copyright 2022
+ * @ver 2.0
+ */
 
+//const _SERVIDORh = "http://www.esmonserrate.org/";
+var c = c || new config();
 
 //Include a html file
 function includeHTML(tag) {
