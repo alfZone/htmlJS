@@ -1,13 +1,27 @@
+//https://github.com/alfZone/htmlJS
+
 /**
  * @author alf
  * @copyright 2022
- * @ver 2.0
+ * @ver 4.0
  */
 
-//const _SERVIDORh = "http://www.esmonserrate.org/";
 var c = c || new config();
 
-//Include a html file
+
+//const _SERVIDORh=  window.location.protocol + "//" + window.location.host + "/";
+
+//console.log(_SERVIDORh)
+
+
+function UrlExists(url){
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
+
 function includeHTML(tag) {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -36,7 +50,6 @@ function includeHTML(tag) {
   }
 }
 
-
 //reload a .js file
 function load_js(scriptPath) {
       var head= document.getElementsByTagName('head')[0];
@@ -64,12 +77,9 @@ function getURLPos(pos){
   return queryString[pos];
 }
 
-
-
+//print a table
 function printDiv(tableName) {
-         window.frames["print_frame"].document.body.innerHTML = document.getElementById(tableName).innerHTML;
-         window.frames["print_frame"].window.focus();
-         window.frames["print_frame"].window.print();
-       }
-
-
+  window.frames["print_frame"].document.body.innerHTML = document.getElementById(tableName).innerHTML;
+  window.frames["print_frame"].window.focus();
+  window.frames["print_frame"].window.print();
+}
