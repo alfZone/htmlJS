@@ -1,7 +1,7 @@
 /**
  * @author alf
  * @copyright 2022
- * @ver 1.1
+ * @ver 1.2
  */
 
 
@@ -17,7 +17,7 @@
       var com_acento = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ";
       var sem_acento = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYRsBaaaaaaaceeeeiiiionoooooouuuuybyr";
       var novastr="";
-      for(i=0; i<str.length; i++) {
+      for(int i=0; i<str.length; i++) {
         troca=false;
         for (a=0; a<com_acento.length; a++) {
           if (str.substring(i,1)==com_acento.substring(a,1)) {
