@@ -1,0 +1,14 @@
+Using config.js
+
+The config.js is a file with some configurations of a site
+
+Usage
+
+declare config
+
+var c = c || new config();
+
+use of values
+
+const response = await fetch(c.url +`public/manutencao/importState`)
+
