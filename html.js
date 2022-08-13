@@ -1,17 +1,11 @@
-//https://github.com/alfZone/htmlJS
-
 /**
  * @author alf
  * @copyright 2022
- * @ver 4.0
+ * @ver 4.1
+ * https://github.com/alfZone/htmlJS
  */
 
 var c = c || new config();
-
-
-//const _SERVIDORh=  window.location.protocol + "//" + window.location.host + "/";
-
-//console.log(_SERVIDORh)
 
 
 function UrlExists(url){
