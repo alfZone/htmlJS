@@ -6,7 +6,7 @@ Usage
 
 declare config
 
-var c = c || new config();
+var c = c || new Config();
 
 use of values
 
