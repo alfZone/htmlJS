@@ -14,10 +14,12 @@ Replace "/path/to/menu.html" with the correct path to your menu file.
 
 2. Create a script section and include the following lines to load the file:
 
+```
 <script>
   includeHTML("head");
   includeHTML("menu");
 </script>
+```
 
 The includeHTML("head") line loads the head section of the included file, and the includeHTML("menu") line loads the menu content.
 
