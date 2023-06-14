@@ -6,7 +6,9 @@ The includeHTML(tag) function allows you to include an external file in several 
 
 1. Add the following line at the position where you want to import the file:
 
-'''<div menu="/path/to/menu.html"></div>'''
+```
+<div menu="/path/to/menu.html"></div>
+```
 
 Replace "/path/to/menu.html" with the correct path to your menu file.
 
