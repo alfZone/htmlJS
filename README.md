@@ -4,7 +4,7 @@ A set of functions on JS to several proposis
 # includeHTML(tag)
 The includeHTML(tag) function allows you to include an external file in several HTML pages. For example, if you want to use a menu across multiple pages. Here's how you can use it:
 
-- Add the following line at the position where you want to import the file:
+1. Add the following line at the position where you want to import the file:
 
 ```
 <div menu="/path/to/menu.html"></div>
@@ -12,7 +12,7 @@ The includeHTML(tag) function allows you to include an external file in several 
 
 Replace "/path/to/menu.html" with the correct path to your menu file.
 
-- Create a script section and include the following lines to load the file:
+2. Create a script section and include the following lines to load the file:
 
 ```
 <script>
