@@ -1,7 +1,7 @@
 /**
  * @author alf
  * @copyright 2022
- * @ver 1.0
+ * @ver 2.0
  * 
  * Object to control data time in pt
  */
@@ -9,33 +9,43 @@
 
  class dateTime {
 
+
+      constructor() {
+  }
+
+  // Função auxiliar para formatar números com 2 dígitos
+  pad2(num) {
+    return num.toString().padStart(2, '0');
+  }
+
 	get getDataH(){
 		let dataH;
 		let d = new Date();
-		let m=d.getMonth()*1 +1
-		dataH=d.getDate() + "/" + m + "/" + d.getFullYear() ;
+		let m= this.pad2(d.getMonth()*1 +1);
+		dataH= this.pad2(d.getDate()) + "/" + m + "/" + d.getFullYear() ;
+		return dataH;
+	}
+
+    getDataHoraEscolhida(dataEsc){
+		let dataH;
+		//let d = new Date();
+		let m= this.pad2(dataEsc.getMonth()*1 +1)
+		dataH=this.pad2(dataEsc.getDate()) + "/" + m + "/" + this.pad2(dataEsc.getFullYear()) ;
+        dataH=dataH + " " + this.pad2(dataEsc.getHours()) + "h:" + this.pad2(dataEsc.getMinutes()) + "m" ;
 		return dataH;
 	}
 	
-	get getData(dt){
+    getData(dt){
 	  let data;
 	  let d = new Date(dt);
-	  let me= 1 +d.getMonth()*1 
-	  data=d.getDate() + "/" + me + "/" + d.getFullYear() ;
+	  let me= 1 +d.getMonth()*1
+	  data=this.pad2(d.getDate()) + "/" + this.pad2(me) + "/" + this.pad2(d.getFullYear()) ;
 	  return data;
 	}
 	
-	get getDiaSemana(dt){
-	  let dias[];
-	  dias[0] = "Segunda";
-	  dias[1] = "Terça";
-	  dias[2] = "Quarta";
-	  dias[3] = "Quinta";
-	  dias[4] = "Sexta";
-	  dias[5] = "Sábado";
-	  dias[6] = "Domingo";
-	  var n = dias[dt.getDay()];
-	  return n;
+	getDiaSemana(dt){
+	  let dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    return dias[dt.getDay()];
 	}
 
 }
