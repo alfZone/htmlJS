@@ -25,3 +25,9 @@ The ```includeHTML("head")``` line loads the head section of the included file, 
 
 The tag parameter in the ```includeHTML(tag)``` function should match the attribute used in the <div> tag. 
 You can include as many files as you want by calling the ```includeHTML()``` function with different tags.
+
+3. Include js files
+```html
+    <script src="/js/code/config.js"></script>
+    <script src="/js/code/html.js"></scrip
+```
