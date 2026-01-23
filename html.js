@@ -5,7 +5,7 @@
  * https://github.com/alfZone/htmlJS
  */
 
-var c = c || new config();
+var c = c || new Config();
 
 
 function UrlExists(url){
